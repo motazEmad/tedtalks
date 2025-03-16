@@ -24,12 +24,6 @@ to start the application with local profile:
 mvn spring-boot:run -Dspring-boot.run.profiles=local
 ```
 
-
-## API Documentation
-
-The API documentation can be found at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
-
-
 ## Assumptions
 - url is unique
 - likes and views do not exceed long max value
