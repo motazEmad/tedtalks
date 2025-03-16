@@ -1,0 +1,9 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/tedtalks
+        username: tedtalks
+        password: tedtalks
+
+    jpa:
+        hibernate:
+            ddl-auto: update

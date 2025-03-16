@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: tedtalks-db
+    image: postgres:17.4
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: tedtalks
+      POSTGRES_PASSWORD: tedtalks
+      POSTGRES_DB: tedtalks
