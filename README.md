@@ -24,6 +24,25 @@ to start the application with local profile:
 mvn spring-boot:run -D"spring-boot.run.profiles"=local
 ```
 
+## API Endpoints
+
+- **`GET /api/v1/tedtalks?title=?`**
+    - **Description:** Searches for Ted Talks with the specified title.
+
+- **`PUT /api/v1/tedtalks`**
+    - **Description:** Saves a new Ted Talk.
+
+- **`PATCH /api/v1/tedtalks`**
+    - **Description:** Updates an existing Ted Talk.
+
+- **`DELETE /api/v1/tedtalks/{id}`**
+    - **Description:** Deletes a Ted Talk by its ID.
+
+- **`POST /api/v1/tedtalks/import/csv`**
+    - **Description:** Imports Ted Talks from a CSV file.
+- **`GET /api/v1/tedtalks/analysis/top-speakers?limit=?`**
+    - **Description:** Returns the top {limit} of Ted Talks, based on the number of views and likes.
+
 ## Assumptions
 - url is unique
 - likes and views do not exceed long max value and is not less than 0
