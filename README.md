@@ -8,10 +8,14 @@ This project is a simple API that allows users to interact with a database of Te
 
 This project was built using the following technologies:
 - Java 21
-- Spring Boot 2.6.3
+- Spring Boot 3.4.3
 - Postgres database 17
 - Docker
 
+## Prerequisites
+- Java 21
+- Maven
+- Docker
 
 ## Getting Started
 to start the database:

@@ -1,6 +1,6 @@
 package com.io.tedtalks.service;
 
-import com.io.tedtalks.entity.TopSpeaker;
+import com.io.tedtalks.model.TopSpeaker;
 import com.io.tedtalks.model.TedTalk;
 import com.io.tedtalks.repository.TedTalkRepository;
 import org.junit.jupiter.api.Test;

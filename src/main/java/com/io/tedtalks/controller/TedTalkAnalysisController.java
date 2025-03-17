@@ -1,6 +1,6 @@
 package com.io.tedtalks.controller;
 
-import com.io.tedtalks.entity.TopSpeaker;
+import com.io.tedtalks.model.TopSpeaker;
 import com.io.tedtalks.service.TedTalkService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

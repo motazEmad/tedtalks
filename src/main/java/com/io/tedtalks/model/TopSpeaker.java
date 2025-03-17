@@ -1,4 +1,4 @@
-package com.io.tedtalks.entity;
+package com.io.tedtalks.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
