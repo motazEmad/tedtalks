@@ -19,7 +19,7 @@ public class TedTalkAnalysisController {
 
     @GetMapping("/top-speakers")
     public List<TopSpeaker> getTopTedTalkSpeakers(@RequestParam("limit") int limit,
-                                                  @RequestParam("year") Integer year) {
+                                                  @RequestParam(value = "year", required = false) Integer year) {
         if(year == null) {
             return tedTalkService.getTopTedTalkSpeakers(limit);
         }

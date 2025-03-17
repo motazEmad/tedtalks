@@ -76,12 +76,20 @@ public class TedTalkImportService {
         }
         try {
             views = Long.parseLong(fields[3]);
+            if(views < 0) {
+                log.info("Line %s: Views cannot be negative".formatted(line));
+                throw new CSVFileFormatException("Line %s: Views cannot be negative".formatted(line));
+            }
         } catch (NumberFormatException e) {
             log.info("Line %s: Invalid views format".formatted(line));
             throw new CSVFileFormatException("Line %s: Invalid views format".formatted(line));
         }
         try {
             likes = Long.parseLong(fields[4]);
+            if(likes < 0) {
+                log.info("Line %s: Likes cannot be negative".formatted(line));
+                throw new CSVFileFormatException("Line %s: Likes cannot be negative".formatted(line));
+            }
         } catch (NumberFormatException e) {
             log.info("Line %s: Invalid likes format".formatted(line));
             throw new CSVFileFormatException("Line %s: Invalid likes format".formatted(line));

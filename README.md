@@ -26,7 +26,8 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 
 ## Assumptions
 - url is unique
-- likes and views do not exceed long max value
+- likes and views do not exceed long max value and is not less than 0
+- duplicate entire are tolerated and will be added once to the database
 - the Talk date do not have the day, only the month and year
 - Authentication is not required, an improvement would implement oAuth2 for security
 - parsing the file is done in memory, for large files it would be better to use a stream

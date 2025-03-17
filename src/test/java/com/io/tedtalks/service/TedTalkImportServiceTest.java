@@ -16,8 +16,7 @@ import java.time.YearMonth;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class TedTalkImportServiceTest {
@@ -38,6 +37,14 @@ class TedTalkImportServiceTest {
         tedTalkImportService.importTedTalksFromCsv(file);
 
         verify(tedTalkRepository).saveAll(expectedTedTalks);
+    }
+
+    @Test
+    void shouldImportTedTalksFromValidCsvMinusLikes() {
+        MultipartFile file = new MockMultipartFile("file", "tedtalks.csv", "text/csv",
+                "title,speaker,date,views,likes,url\nTitle1,Speaker1,February 2023,100,-50,url1".getBytes(StandardCharsets.UTF_8));
+
+        assertThrows(CSVFileFormatException.class, () -> tedTalkImportService.importTedTalksFromCsv(file));
     }
 
     @Test
