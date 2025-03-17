@@ -21,7 +21,7 @@ docker compose up -d
 
 to start the application with local profile:
 ```
-mvn spring-boot:run -Dspring-boot.run.profiles=local
+mvn spring-boot:run -D"spring-boot.run.profiles"=local
 ```
 
 ## Assumptions
