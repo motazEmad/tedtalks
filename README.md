@@ -41,7 +41,7 @@ mvn spring-boot:run -D"spring-boot.run.profiles"=local
 - **`POST /api/v1/tedtalks/import/csv`**
     - **Description:** Imports Ted Talks from a CSV file.
 - **`GET /api/v1/tedtalks/analysis/top-speakers?limit=?`**
-    - **Description:** Returns the top {limit} of Ted Talks, based on the number of views and likes.
+    - **Description:** Returns the top {limit} of Authors, based on the number of views and likes.
 
 ## Assumptions
 - url is unique
